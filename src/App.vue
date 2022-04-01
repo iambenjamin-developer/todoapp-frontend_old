@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import ToDoApp from './components/ToDoApp.vue'
+
 </script>
 
 <template>
@@ -13,7 +15,7 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <ToDoApp />
   </main>
 </template>
 

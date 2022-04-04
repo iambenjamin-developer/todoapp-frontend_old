@@ -1,4 +1,5 @@
 <script setup>
+import Home from './Home.vue';
 
 const toDoItem1 = {
     id: 1,
@@ -49,4 +50,5 @@ const toDoList = [toDoItem1, toDoItem2, toDoItem3, toDoItem4];
             </tr>
         </tbody>
     </table>
+    <Home />
 </template>

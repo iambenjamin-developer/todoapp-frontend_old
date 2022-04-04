@@ -3,9 +3,8 @@
     <ul v-if="posts && posts.length">
       <li v-for="(post, index) in posts" v-bind:key="index">
         <p>
-          <strong>{{post.userId + ' - '+ post.id + ' - '+ post.title }}</strong>
+          <strong>{{post.id + ' - '+ post.title + ' - '+ post.completed }}</strong>
         </p>
-        <p>{{ post.body }}</p>
       </li>
     </ul>
 
@@ -28,7 +27,7 @@ export default {
 
   // Fetches posts when the component is created.
   created() {
-    axios.get(`http://jsonplaceholder.typicode.com/posts`)
+    axios.get(`https://jsonplaceholder.typicode.com/todos`)
       .then(response => {
         // JSON responses are automatically parsed.
         this.posts = response.data

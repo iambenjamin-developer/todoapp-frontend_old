@@ -1,16 +1,27 @@
 <template>
   <div>
-    <ul v-if="toDoList && toDoList.length">
-      <li v-for="(toDoItem, index) in toDoList" v-bind:key="index">
-        <p>
-          <strong>{{toDoItem.id + ' - '+ toDoItem.title + ' - '+ toDoItem.completed }}</strong>
-        </p>
-      </li>
-    </ul>
-
-    <ul v-if="errors && errors.length">
-      <li v-for="(error, index) in errors" v-bind:key="index">{{ error.message }}</li>
-    </ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">
+            <strong>Id</strong>
+          </th>
+          <th scope="col">
+            <strong>Name</strong>
+          </th>
+          <th scope="col">
+            <strong>Is Completed</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(toDoItem, index) in toDoList" v-bind:key="index">
+          <th scope="row">{{ toDoItem.id }}</th>
+          <td>{{ toDoItem.title }}</td>
+          <td>{{ toDoItem.completed }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>To Do List</h1>
     <table class="table">
       <thead>
         <tr>

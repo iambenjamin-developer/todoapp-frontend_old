@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import ToDoApp from './components/ToDoApp.vue'
+import Home from './components/Home.vue';
 
 </script>
 
@@ -15,12 +16,12 @@ import ToDoApp from './components/ToDoApp.vue'
   </header>
 
   <main>
-    <ToDoApp />
+    <Home />
   </main>
 </template>
 
 <style>
-@import './assets/base.css';
+@import "./assets/base.css";
 
 #app {
   max-width: 1280px;

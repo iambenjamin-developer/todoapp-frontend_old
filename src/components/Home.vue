@@ -1,9 +1,9 @@
 <template>
   <div>
-    <ul v-if="posts && posts.length">
-      <li v-for="(post, index) in posts" v-bind:key="index">
+    <ul v-if="toDoList && toDoList.length">
+      <li v-for="(toDoItem, index) in toDoList" v-bind:key="index">
         <p>
-          <strong>{{post.id + ' - '+ post.title + ' - '+ post.completed }}</strong>
+          <strong>{{toDoItem.id + ' - '+ toDoItem.title + ' - '+ toDoItem.completed }}</strong>
         </p>
       </li>
     </ul>
@@ -20,17 +20,17 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      posts: [],
+      toDoList: [],
       errors: []
     }
   },
 
-  // Fetches posts when the component is created.
+  // Fetches toDoList when the component is created.
   created() {
     axios.get(`https://jsonplaceholder.typicode.com/todos`)
       .then(response => {
         // JSON responses are automatically parsed.
-        this.posts = response.data
+        this.toDoList = response.data
       })
       .catch(e => {
         this.errors.push(e)
